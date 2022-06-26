@@ -56,13 +56,15 @@ export function Lesson(props: LessonProps) {
                    )}
 
                    {props.type == 'live' ? (
-                    <span className={classNames('text-xs rounded px-2 py-[0.125rem] text-white border border-green-300 font-bold', {
+                    <span className={classNames('text-xs rounded px-2 py-[0.125rem] text-white border font-bold', {
+                        'border-green-300': !isActiveLesson,
                         'border-white': isActiveLesson,
                     })}>
                         AO VIVO
                     </span>
                    ) : (
-                    <span className={classNames('text-xs rounded px-2 py-[0.125rem] text-white border border-orange-600 font-bold' ,{
+                    <span className={classNames('text-xs rounded px-2 py-[0.125rem] text-white border font-bold' ,{
+                        'border-orange-600': !isActiveLesson,
                         'border-white': isActiveLesson
                     })}>
                         VÍDEO PRÁTICO
