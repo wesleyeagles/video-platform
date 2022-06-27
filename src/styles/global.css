@@ -7,3 +7,40 @@ body {
     @apply bg-gray-900 text-gray-100;
     -webkit-font-smoothing: antialiased;
 }
+
+body::-webkit-scrollbar {
+    width: 10px
+
+}
+
+body::-webkit-scrollbar-track { 
+  @apply bg-white
+}
+
+body::-webkit-scrollbar-thumb { 
+  @apply bg-purple-700 rounded-full
+}
+
+
+
+
+/* For Firefox Browser */
+.scrollbar {
+  scrollbar-width: 1px;
+  scrollbar-color: @apply bg-gray-50;
+
+}
+
+
+/* For Chrome, EDGE, Opera, Others */
+.scrollbar::-webkit-scrollbar {
+  width: 1px;
+}
+
+.scrollbar::-webkit-scrollbar-track { 
+  @apply bg-white
+}
+
+.scrollbar::-webkit-scrollbar-thumb { 
+  @apply bg-purple-700
+}
