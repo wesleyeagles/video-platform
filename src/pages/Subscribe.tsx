@@ -93,7 +93,7 @@ export function Subscribe() {
                     type="text" 
                     name="" 
                     id=""
-                    placeholder="Seu nome completo" 
+                    placeholder="Seu nome" 
                     onChange={event => setName(event.target.value)}
                     onClick={() => setErrorName(false)}
                     />
