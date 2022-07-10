@@ -8,9 +8,7 @@ import { Video } from "../components/Video";
 export function Event() {
 
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
+    
 
 
     const navigate = useNavigate()

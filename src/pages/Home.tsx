@@ -18,6 +18,10 @@ interface LaunchProps {
 
 export function Home(props: LaunchProps) {
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
     const { launchSlug } = useParams<{launchSlug: string}>()
     
     const { data } = useGetLaunchsQuery()
