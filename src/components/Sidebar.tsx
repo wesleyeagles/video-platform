@@ -31,7 +31,7 @@ export function Sidebar(props: SidebarProps) {
 
 
     return (
-        <aside className={classNames('w-full lg:w-[348px] bg-gray-700 border-l lg:p-6 border-gray-600 lg:block overflow-hidden lg:h-auto', {
+        <aside className={classNames('w-full lg:w-[348px] bg-gray-700 duration-700 border-l lg:p-6 border-gray-600 lg:block overflow-hidden lg:h-auto', {
         'h-0': !isMenuOpen,
         'h-auto p-6': isMenuOpen
         })}>

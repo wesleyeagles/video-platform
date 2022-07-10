@@ -43,8 +43,8 @@ export function Video(props: VideoProps) {
             </div>
 
             <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="flex items-start gap-16">
-                    <div className="flex-1 ">
+                <div className="flex items-start lg:flex-1 flex-col lg:flex-row gap-16">
+                    <div className="flex-1">
                         <h1 className="text-2xl font-bold ">{data.lesson.title}</h1>
                         <p className="mt-4 text-gray-200 leading-relaxed">{data.lesson.description}</p>
 
@@ -83,7 +83,7 @@ export function Video(props: VideoProps) {
 
 
 
-                <div className="gap-8 mt-20 grid grid-cols-2">
+                <div className="gap-8 mt-20 grid lg:grid-cols-2">
                     <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
                         <div className="bg-purple-700  h-full p-6 flex items-center"><FileArrowDown size={40}/>
                            
@@ -94,7 +94,7 @@ export function Video(props: VideoProps) {
                             <p className="text-sm text-gray-200 mt-2">Acesse o material disponibilizado no vídeo</p>
                         </div>
 
-                        <div className="h-full p-6 flex items-center"><CaretRight size={24}/></div>
+                        <div className="h-full p-6 hidden lg:flex items-center"><CaretRight size={24}/></div>
                     </a>
 
 
@@ -108,7 +108,7 @@ export function Video(props: VideoProps) {
                             <p className="text-sm text-gray-200 mt-2">Conheça nosso programa de estudos, impulsionamos alunos a se tornarem futuras lideranças no mercado</p>
                         </div>
 
-                        <div className="h-full p-6 flex items-center"><CaretRight size={24}/></div>
+                        <div className="h-full p-6 hidden lg:flex items-center"><CaretRight size={24}/></div>
                     </a>
 
                     <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
@@ -121,7 +121,7 @@ export function Video(props: VideoProps) {
                             <p className="text-sm text-gray-200 mt-2">Ficou com dúvidas? Entre já em contato com nossa equipe especializada</p>
                         </div>
 
-                        <div className="h-full p-6 flex items-center"><CaretRight size={24}/></div>
+                        <div className="h-full p-6 hidden lg:flex items-center"><CaretRight size={24}/></div>
                     </a>
 
                 </div>
@@ -134,7 +134,7 @@ export function Video(props: VideoProps) {
             <div className="bg-gray-700 border-t border-gray-600 w-full h-10 mt-10 items-center flex p-8">
                 <div className="flex-1 flex gap-6 items-center">
                     <h1 className="font-black">LOGO</h1>
-                    <span className="text-sm text-gray-200">@Hawk - Todos direitos reservados</span>
+                    <span className="text-sm text-gray-200 hidden lg:block">@Hawk - Todos direitos reservados</span>
                 </div>
 
                 <div className="flex gap-6">

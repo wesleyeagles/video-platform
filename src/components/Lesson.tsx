@@ -3,6 +3,7 @@ import { format, isPast } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { Link, useParams } from 'react-router-dom';
 import classNames from 'classnames'
+import { useDrawerContext } from '../contexts/MenuContext';
 
 interface LessonProps {
 
@@ -14,6 +15,8 @@ interface LessonProps {
 }
 
 export function Lesson(props: LessonProps) {
+
+    const { handleMenuClick} = useDrawerContext()
 
     const { lessonSlug } = useParams<{lessonSlug: string}>()
     const { launchSlug } = useParams<{launchSlug: string}>()
@@ -29,7 +32,7 @@ export function Lesson(props: LessonProps) {
     return (
         <div>
             {isLessonAvailable? (
-                <Link to={`/launches/${launchSlug}/${props.lessonSlug}`} className='group'>
+                <Link onClick={handleMenuClick} to={`/launches/${launchSlug}/${props.lessonSlug}`} className='group'>
                 <span className={classNames('text-gray-300', {
                     'text-white font-bold': isActiveLesson
                 })}>
