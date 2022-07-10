@@ -1,10 +1,18 @@
 import { Bug, Hamburger, HandbagSimple, List } from "phosphor-react";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDrawerContext } from "../contexts/MenuContext";
 
 export function Header() {
 
     const { handleMenuClick} = useDrawerContext()
+
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        localStorage.clear()
+        navigate('/login')
+    }
 
     
 
@@ -19,6 +27,14 @@ export function Header() {
                     <List size={28} color="#8800a3" weight="fill"/>
                     </div>
                 </div>
+        </div>
+        <div>
+         <span 
+         className="block cursor-pointer"
+         onClick={handleLogout}
+         >
+        LOGOUT
+         </span>   
         </div>
         </header>
     )

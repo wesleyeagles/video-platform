@@ -1,0 +1,12 @@
+ query GetLaunchs {
+        launches (orderBy:  name_ASC) {
+            name
+            description
+            thumbUrl
+            launchSlug
+            lessons {
+                title
+                
+            }
+        }
+    }

@@ -4,6 +4,6 @@ query GetLessons {
     lessonType
     availableAt
     title
-    slug
+    lessonSlug
   }
 }

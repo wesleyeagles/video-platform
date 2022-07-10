@@ -1,5 +1,5 @@
- query GetLessonBySlug ($slug: String) {
-        lesson(where: {slug: $slug}) {
+query GetLessonBySlug ($lessonSlug: String) {
+        lesson(where: {lessonSlug: $lessonSlug}) {
             title
             videoId
             description

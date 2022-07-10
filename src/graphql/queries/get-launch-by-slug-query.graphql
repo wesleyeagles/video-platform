@@ -1,0 +1,19 @@
+query GetLaunchBySlug ($launchSlug: String)  {
+  launch(where: {launchSlug: $launchSlug}) {
+    name
+    lessons {
+                id
+                title
+                videoId
+                description
+                lessonSlug
+                availableAt
+                lessonType
+                teacher {
+                bio
+                avatarURL
+                name
+            }
+    }
+  }
+}

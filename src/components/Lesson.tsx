@@ -7,26 +7,29 @@ import classNames from 'classnames'
 interface LessonProps {
 
     title: string;
-    slug: string;
+    lessonSlug: string;
+    launchSlug?: string;
     availableAt: Date;
     type: 'live' | 'class';
 }
 
 export function Lesson(props: LessonProps) {
 
-    const { slug } = useParams<{slug: string}>()
+    const { lessonSlug } = useParams<{lessonSlug: string}>()
+    const { launchSlug } = useParams<{launchSlug: string}>()
+    console.log(launchSlug)
 
     const isLessonAvailable = isPast(props.availableAt)
     const availableDateFormatted = format(props.availableAt, "EEEE' - 'd' de 'MMMM' - 'k'h'mm", {
         locale: ptBR,
     })
 
-    const isActiveLesson = slug === props.slug;
+    const isActiveLesson = lessonSlug === props.lessonSlug;
 
     return (
         <div>
             {isLessonAvailable? (
-                <Link to={`/event/lesson/${props.slug}`} className='group'>
+                <Link to={`/launches/${launchSlug}/${props.lessonSlug}`} className='group'>
                 <span className={classNames('text-gray-300', {
                     'text-white font-bold': isActiveLesson
                 })}>
@@ -96,7 +99,7 @@ export function Lesson(props: LessonProps) {
             
             
             (
-                <Link to={`/event/lesson/${props.slug}`} className='group pointer-events-none'>
+                <Link to={`/event/lesson/${props.lessonSlug}`} className='group pointer-events-none'>
             <span className={classNames('text-gray-300', {
                 'text-white font-bold': isActiveLesson
             })}>

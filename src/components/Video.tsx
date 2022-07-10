@@ -15,7 +15,7 @@ export function Video(props: VideoProps) {
     const {data, loading} = useGetLessonBySlugQuery(
         {
             variables: {
-                slug: props.lessonSlug
+                lessonSlug: props.lessonSlug
             },
 
 

@@ -1,0 +1,7 @@
+mutation CreateTeacher ($name: String!, $bio: String!, $avatarURL: String!) {
+    createTeacher (data: { name:$name, bio:$bio, avatarURL:$avatarURL }) {
+        id
+    }
+}
+
+
